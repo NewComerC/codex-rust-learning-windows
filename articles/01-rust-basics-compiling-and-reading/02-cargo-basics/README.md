@@ -9,8 +9,10 @@
 Cargo 项目结构、Cargo.toml 的 [package]/[dependencies]、edition、cargo check/build/run/test、target/debug 与 target/release
 
 ## 运行命令（Windows）
+
+从仓库根目录执行：
 ```powershell
-cd 02-cargo-basics
+cd articles\01-rust-basics-compiling-and-reading\02-cargo-basics
 cargo run
 ```
 

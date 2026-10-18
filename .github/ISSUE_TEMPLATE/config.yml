@@ -1,0 +1,3 @@
+blank_issues_enabled: false
+# 不设置 contact_links：暂无可公开的外部联系链接，避免编造地址。
+# 提问与求助请使用本仓库的 Issue 模板。

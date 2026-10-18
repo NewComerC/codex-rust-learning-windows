@@ -9,8 +9,10 @@
 struct 字段、impl、Self/self、&self 共享借用、String::from 关联函数调用、字段简写
 
 ## 运行命令（Windows）
+
+从仓库根目录执行：
 ```powershell
-cd 04-struct-impl-request
+cd articles\01-rust-basics-compiling-and-reading\04-struct-impl-request
 cargo run
 ```
 

@@ -19,22 +19,22 @@
 ## 学习路线（按定稿三部分）
 
 1. **一、Rust 语言全景：先认识核心特性**：编译执行、类型与抽象、所有权与资源、Option/Result、并发与安全——先建立整体认识（以读文章为主）。
-2. **二、开发工具与 Cargo：编译和运行第一个程序**：`01-rustc-hello` → `02-cargo-basics`，跑通第一个程序。
-3. **三、Rust 语法基础：从变量到数据建模**：`03-variables-and-functions` → `04-struct-impl-request` → `05-enum-match-input` → `06-option-title`。
+2. **二、开发工具与 Cargo：编译和运行第一个程序**：[`01-rustc-hello`](articles/01-rust-basics-compiling-and-reading/01-rustc-hello/) → [`02-cargo-basics`](articles/01-rust-basics-compiling-and-reading/02-cargo-basics/)，跑通第一个程序。
+3. **三、Rust 语法基础：从变量到数据建模**：[`03-variables-and-functions`](articles/01-rust-basics-compiling-and-reading/03-variables-and-functions/) → [`04-struct-impl-request`](articles/01-rust-basics-compiling-and-reading/04-struct-impl-request/) → [`05-enum-match-input`](articles/01-rust-basics-compiling-and-reading/05-enum-match-input/) → [`06-option-title`](articles/01-rust-basics-compiling-and-reading/06-option-title/)。
 
-**附录：Codex 源码阅读指引**：`07-codex-source-reading`（定稿三部分之外保留的附录，不作为正文第 4 部分；读真实类型 `UserInput` 并沿 Cargo 配置找到 CLI 入口）。
+**附录：Codex 源码阅读指引**：[`07-codex-source-reading`](articles/01-rust-basics-compiling-and-reading/07-codex-source-reading/)（定稿三部分之外保留的附录，不作为正文第 4 部分；读真实类型 `UserInput` 并沿 Cargo 配置找到 CLI 入口）。
 
 ## 项目列表
 
 | 目录 | 主题 | 关键概念 |
 |---|---|---|
-| `01-rustc-hello` | 用 rustc 编译运行最小程序 | rustc 编译与执行、fn main 入口、println! 宏 |
-| `02-cargo-basics` | 用 Cargo 创建项目 rust_reading | Cargo 项目结构、Cargo.toml 的 [package]/[dependencies]、edition、cargo check/build/run/test、target/debug 与 target/release |
-| `03-variables-and-functions` | 变量与函数：类型、可变性与返回值 | let 与类型标注 u32、类型推断、mut、shadowing、if 表达式、尾表达式返回值、() 单元值 |
-| `04-struct-impl-request` | struct 与 impl：组织数据和方法 | struct 字段、impl、Self/self、&self 共享借用、String::from 关联函数调用、字段简写 |
-| `05-enum-match-input` | enum 与 match：表达和处理不同形态 | enum 变体、Input::Text / Input::LocalImage 构造、match 模式绑定、format! 与 println! 区别、穷尽匹配 |
-| `06-option-title` | Option：明确表示有值或缺失 | Option<String>、Some/None、Option 与 String 是不同类型、Some("") 与 None 的区别 |
-| `07-codex-source-reading` | 附录：Codex 源码阅读指引（读类型并找到入口） | pub、Vec<T>、PathBuf、Option、属性 #[...]、package/crate/module/workspace、[[bin]] 入口定位 |
+| [`01-rustc-hello`](articles/01-rust-basics-compiling-and-reading/01-rustc-hello/) | 用 rustc 编译运行最小程序 | rustc 编译与执行、fn main 入口、println! 宏 |
+| [`02-cargo-basics`](articles/01-rust-basics-compiling-and-reading/02-cargo-basics/) | 用 Cargo 创建项目 rust_reading | Cargo 项目结构、Cargo.toml 的 [package]/[dependencies]、edition、cargo check/build/run/test、target/debug 与 target/release |
+| [`03-variables-and-functions`](articles/01-rust-basics-compiling-and-reading/03-variables-and-functions/) | 变量与函数：类型、可变性与返回值 | let 与类型标注 u32、类型推断、mut、shadowing、if 表达式、尾表达式返回值、() 单元值 |
+| [`04-struct-impl-request`](articles/01-rust-basics-compiling-and-reading/04-struct-impl-request/) | struct 与 impl：组织数据和方法 | struct 字段、impl、Self/self、&self 共享借用、String::from 关联函数调用、字段简写 |
+| [`05-enum-match-input`](articles/01-rust-basics-compiling-and-reading/05-enum-match-input/) | enum 与 match：表达和处理不同形态 | enum 变体、Input::Text / Input::LocalImage 构造、match 模式绑定、format! 与 println! 区别、穷尽匹配 |
+| [`06-option-title`](articles/01-rust-basics-compiling-and-reading/06-option-title/) | Option：明确表示有值或缺失 | Option<String>、Some/None、Option 与 String 是不同类型、Some("") 与 None 的区别 |
+| [`07-codex-source-reading`](articles/01-rust-basics-compiling-and-reading/07-codex-source-reading/) | 附录：Codex 源码阅读指引（读类型并找到入口） | pub、Vec<T>、PathBuf、Option、属性 #[...]、package/crate/module/workspace、[[bin]] 入口定位 |
 
 每个项目目录内的 README 写有：学习目标、涉及概念、运行命令、完成标准/自测问题（均源自文章）。
 
@@ -55,7 +55,7 @@ cargo --version
 3. 跑通第一个项目：
 
 ```powershell
-cd 01-rustc-hello
+cd articles\01-rust-basics-compiling-and-reading\01-rustc-hello
 rustc main.rs
 .\main.exe
 
@@ -81,12 +81,25 @@ cargo run
 
 ## 与 Codex 源码学习的关系
 
-本专题是阅读 Codex 源码前的基础准备：先在本仓跑通并读懂教学示例，再按附录 `07-codex-source-reading/README.md` 的指引去读固定版本（commit `5009a99dfc07830ddf7464c26f310a2b8532b55d`）的 Codex 源码。专栏链接待补充（占位，不在此编造）。
+本专题是阅读 Codex 源码前的基础准备：先在本仓跑通并读懂教学示例，再按附录 `articles/01-rust-basics-compiling-and-reading/07-codex-source-reading/README.md` 的指引去读固定版本（commit `5009a99dfc07830ddf7464c26f310a2b8532b55d`）的 Codex 源码。专栏链接待补充（占位，不在此编造）。
 
 ## 代码来源说明
 
 - `01`–`06` 的代码为文章中标注为完整程序的教学示例，按文章原样放入（含文章注释）。
 - `07` 中的源码为摘录，不能单独运行，只作阅读练习，详见该目录 README 的来源链接。
+
+
+## 文章索引与版本
+
+- 文章索引：[`articles/README.md`](articles/README.md)（序号 / 标题 / 对应目录 / 对应 tag / 状态）。
+- 当前第一篇目录：[`articles/01-rust-basics-compiling-and-reading/`](articles/01-rust-basics-compiling-and-reading/)，对应 tag `v0.1.0`（见仓库 Releases）。
+- 版本约定：每篇文章一个 minor 版本（第一篇 `v0.1.0`、第二篇 `v0.2.0`，依次类推），同一篇的修正用 patch（如 `v0.1.1`）。后续文章增量新增 `articles/02-…` 等目录，不移动已发布目录。详见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
+
+## 反馈与贡献
+
+- 提问题/报 Bug/提建议：请到 [Issues](https://github.com/NewComerC/codex-rust-learning-windows/issues) 选择模板提交（Bug 报告 / 运行求助 / 内容建议）；空白 Issue 已关闭，请用模板以便复现。
+- 提 PR 前请读 [`CONTRIBUTING.md`](CONTRIBUTING.md)，并按 PR 模板填写自测命令与输出。
+- 发现疑似敏感信息请勿公开粘贴原文，见 [`SECURITY.md`](SECURITY.md)。
 
 ## License
 

@@ -9,8 +9,10 @@
 let 与类型标注 u32、类型推断、mut、shadowing、if 表达式、尾表达式返回值、() 单元值
 
 ## 运行命令（Windows）
+
+从仓库根目录执行：
 ```powershell
-cd 03-variables-and-functions
+cd articles\01-rust-basics-compiling-and-reading\03-variables-and-functions
 cargo run
 ```
 

@@ -9,8 +9,10 @@
 enum 变体、Input::Text / Input::LocalImage 构造、match 模式绑定、format! 与 println! 区别、穷尽匹配
 
 ## 运行命令（Windows）
+
+从仓库根目录执行：
 ```powershell
-cd 05-enum-match-input
+cd articles\01-rust-basics-compiling-and-reading\05-enum-match-input
 cargo run
 ```
 

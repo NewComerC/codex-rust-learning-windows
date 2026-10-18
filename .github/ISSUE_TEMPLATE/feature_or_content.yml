@@ -1,0 +1,44 @@
+name: 内容建议
+description: 想学的主题、后续文章建议或期望的讲解形式
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提学习内容建议。代码功能类需求也可以写在这里，并说明与配套文章的关系。
+  - type: input
+    id: topic
+    attributes:
+      label: 想学的主题 / 文章建议
+      description: 一句话写清建议主题
+      placeholder: 例如：希望下一篇讲 Result 与错误处理
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 详细说明
+      description: 为什么想学、卡在哪里、希望解决什么问题
+    validations:
+      required: true
+  - type: dropdown
+    id: form
+    attributes:
+      label: 期望形式
+      options:
+        - 新增一篇文章 + 配套示例
+        - 在现有文章/示例中补充说明
+        - 新增一个可运行示例
+        - 视频/直播讲解
+        - 其他（在详细说明中写明）
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: 相关文章 / 示例目录（可选）
+      description: 如与第一篇某个示例相关，请写目录路径
+      placeholder: articles/01-rust-basics-compiling-and-reading/...
+    validations:
+      required: false

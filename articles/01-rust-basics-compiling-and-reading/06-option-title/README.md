@@ -9,8 +9,10 @@
 Option<String>、Some/None、Option 与 String 是不同类型、Some("") 与 None 的区别
 
 ## 运行命令（Windows）
+
+从仓库根目录执行：
 ```powershell
-cd 06-option-title
+cd articles\01-rust-basics-compiling-and-reading\06-option-title
 cargo run
 ```
 

@@ -1,0 +1,42 @@
+name: 运行求助
+description: 跟着步骤做卡住了，需要帮助排查
+title: "[求助] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提问前请先对照对应示例目录内的 README 与配套文章相应小节。提问时信息越完整，越容易定位。请勿粘贴凭据。
+  - type: input
+    id: stuck
+    attributes:
+      label: 卡在哪一步
+      description: 写清文章小节或示例目录、执行到哪条命令
+      placeholder: 例如：第一篇 02 示例，执行 cargo run 时卡住
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: 已尝试什么
+      description: 你已经查过/试过哪些方法，结果如何
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境信息
+      description: 操作系统版本，以及 `rustc --version`、`cargo --version` 的输出
+      placeholder: |
+        OS:
+        rustc:
+        cargo:
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 命令与报错原文
+      description: 粘贴执行的命令与完整报错（无报错则贴实际输出）
+    validations:
+      required: true

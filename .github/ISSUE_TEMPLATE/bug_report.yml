@@ -1,0 +1,83 @@
+name: Bug 报告
+description: 示例跑不通、输出不一致，或命令/文档有误时使用
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量填完整，维护者会按你给的信息复现。请勿粘贴 token、密钥或 `.env` 内容。
+  - type: input
+    id: title-detail
+    attributes:
+      label: 问题标题
+      description: 一句话概括问题
+      placeholder: 例如：04 示例 cargo run 报错
+    validations:
+      required: true
+  - type: dropdown
+    id: example
+    attributes:
+      label: 所属文章 / 示例目录
+      description: 选择出问题的示例；不确定可选“不确定”
+      options:
+        - articles/01-rust-basics-compiling-and-reading/01-rustc-hello
+        - articles/01-rust-basics-compiling-and-reading/02-cargo-basics
+        - articles/01-rust-basics-compiling-and-reading/03-variables-and-functions
+        - articles/01-rust-basics-compiling-and-reading/04-struct-impl-request
+        - articles/01-rust-basics-compiling-and-reading/05-enum-match-input
+        - articles/01-rust-basics-compiling-and-reading/06-option-title
+        - articles/01-rust-basics-compiling-and-reading/07-codex-source-reading（附录）
+        - 仓库文档 / 其他
+        - 不确定
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      description: 例如 macOS 13（Intel）、Windows 11、Ubuntu 24.04
+      placeholder: 操作系统与版本
+    validations:
+      required: true
+  - type: input
+    id: rust-version
+    attributes:
+      label: rustc / cargo 版本
+      description: 运行 `rustc --version` 与 `cargo --version` 后粘贴结果
+      placeholder: rustc 1.x / cargo 1.x
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从仓库根目录开始，写清依次执行的命令
+      placeholder: |
+        1. cd ...
+        2. cargo run
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际输出
+      description: 粘贴实际打印（可截取关键部分）
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望输出
+      description: 你预期应该看到什么
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: 报错原文
+      description: 粘贴完整报错原文；如无报错写“无”
+      placeholder: error[...]
+    validations:
+      required: true
