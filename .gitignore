@@ -1,0 +1,11 @@
+# Rust / Cargo
+# 各示例均为二进制项目，构建产物按项目目录忽略
+**/target/
+
+# 说明：二进制示例项目保留 Cargo.lock 更利于复现（见根 README），故不忽略 Cargo.lock
+
+# 编辑器与系统
+.DS_Store
+.idea/
+.vscode/
+*.swp
