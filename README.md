@@ -14,6 +14,8 @@
 - 默认你理解变量、函数、条件和循环；不需要提前了解 Cargo、所有权或 Rust 工程结构。
 - 前置：能访问 GitHub；按下面指引安装 Rust 工具链，或先用 [Rust Playground](https://play.rust-lang.org/) 在线运行小例子（文章给出的备选方式）。
 
+- **Windows 实测环境说明**：本仓 6 个示例已在 Windows（AMD64/x86_64）实机跑通，本次实测使用 rustup 的 GNU 工具链 `stable-x86_64-pc-windows-gnu`（rustc/cargo 1.99.1），示例无第三方依赖，`rustc`/`cargo run` 均可直接编译运行。若按 Rust 官方安装器的默认 MSVC 工具链（`x86_64-pc-windows-msvc`）安装，通常还需配合 Visual Studio Build Tools 的 C++ 构建组件；两种工具链下本仓的运行命令（`rustc main.rs`、`.\main.exe`、`cargo run`）与预期打印一致，未安装 MSVC 组件时可优先选择 GNU 工具链完成本篇练习。
+
 ## 学习路线（按文章四部分）
 
 1. **Rust 语言全景**：编译执行、类型与抽象、所有权与资源、Option/Result、并发与安全——先建立整体认识（以读文章为主）。
