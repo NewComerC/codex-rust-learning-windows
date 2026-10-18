@@ -16,12 +16,13 @@
 
 - **Windows 实测环境说明**：本仓 6 个示例已在 Windows（AMD64/x86_64）实机跑通，本次实测使用 rustup 的 GNU 工具链 `stable-x86_64-pc-windows-gnu`（rustc/cargo 1.99.1），示例无第三方依赖，`rustc`/`cargo run` 均可直接编译运行。若按 Rust 官方安装器的默认 MSVC 工具链（`x86_64-pc-windows-msvc`）安装，通常还需配合 Visual Studio Build Tools 的 C++ 构建组件；两种工具链下本仓的运行命令（`rustc main.rs`、`.\main.exe`、`cargo run`）与预期打印一致，未安装 MSVC 组件时可优先选择 GNU 工具链完成本篇练习。
 
-## 学习路线（按文章四部分）
+## 学习路线（按定稿三部分）
 
-1. **Rust 语言全景**：编译执行、类型与抽象、所有权与资源、Option/Result、并发与安全——先建立整体认识（以读文章为主）。
-2. **开发工具与 Cargo**：`01-rustc-hello` → `02-cargo-basics`，跑通第一个程序。
-3. **Rust 语法基础**：`03-variables-and-functions` → `04-struct-impl-request` → `05-enum-match-input` → `06-option-title`。
-4. **回到 Codex 源码**：`07-codex-source-reading`，读真实类型 `UserInput` 并沿 Cargo 配置找到 CLI 入口。
+1. **一、Rust 语言全景：先认识核心特性**：编译执行、类型与抽象、所有权与资源、Option/Result、并发与安全——先建立整体认识（以读文章为主）。
+2. **二、开发工具与 Cargo：编译和运行第一个程序**：`01-rustc-hello` → `02-cargo-basics`，跑通第一个程序。
+3. **三、Rust 语法基础：从变量到数据建模**：`03-variables-and-functions` → `04-struct-impl-request` → `05-enum-match-input` → `06-option-title`。
+
+**附录：Codex 源码阅读指引**：`07-codex-source-reading`（定稿三部分之外保留的附录，不作为正文第 4 部分；读真实类型 `UserInput` 并沿 Cargo 配置找到 CLI 入口）。
 
 ## 项目列表
 
@@ -33,7 +34,7 @@
 | `04-struct-impl-request` | struct 与 impl：组织数据和方法 | struct 字段、impl、Self/self、&self 共享借用、String::from 关联函数调用、字段简写 |
 | `05-enum-match-input` | enum 与 match：表达和处理不同形态 | enum 变体、Input::Text / Input::LocalImage 构造、match 模式绑定、format! 与 println! 区别、穷尽匹配 |
 | `06-option-title` | Option：明确表示有值或缺失 | Option<String>、Some/None、Option 与 String 是不同类型、Some("") 与 None 的区别 |
-| `07-codex-source-reading` | 回到 Codex 源码：读类型并找到入口 | pub、Vec<T>、PathBuf、Option、属性 #[...]、package/crate/module/workspace、[[bin]] 入口定位 |
+| `07-codex-source-reading` | 附录：Codex 源码阅读指引（读类型并找到入口） | pub、Vec<T>、PathBuf、Option、属性 #[...]、package/crate/module/workspace、[[bin]] 入口定位 |
 
 每个项目目录内的 README 写有：学习目标、涉及概念、运行命令、完成标准/自测问题（均源自文章）。
 
@@ -80,7 +81,7 @@ cargo run
 
 ## 与 Codex 源码学习的关系
 
-本专题是阅读 Codex 源码前的基础准备：先在本仓跑通并读懂教学示例，再按 `07-codex-source-reading/README.md` 的指引去读固定版本（commit `5009a99dfc07830ddf7464c26f310a2b8532b55d`）的 Codex 源码。专栏链接待补充（占位，不在此编造）。
+本专题是阅读 Codex 源码前的基础准备：先在本仓跑通并读懂教学示例，再按附录 `07-codex-source-reading/README.md` 的指引去读固定版本（commit `5009a99dfc07830ddf7464c26f310a2b8532b55d`）的 Codex 源码。专栏链接待补充（占位，不在此编造）。
 
 ## 代码来源说明
 
