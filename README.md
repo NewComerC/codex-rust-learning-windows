@@ -89,10 +89,14 @@ cargo run
 - `07` 中的源码为摘录，不能单独运行，只作阅读练习，详见该目录 README 的来源链接。
 
 
+## 学习路线续：第二篇《理解所有权与借用》（`v0.2.0`）
+
+对应目录：[`articles/02-understanding-ownership-and-borrowing/`](articles/02-understanding-ownership-and-borrowing/)。按文章顺序从 `01-create-string-value` 跑到附录示例；标为「预期编译失败」的目录用于对照报错，不要改代码修通。
+
 ## 文章索引与版本
 
 - 文章索引：[`articles/README.md`](articles/README.md)（序号 / 标题 / 对应目录 / 对应 tag / 状态）。
-- 当前第一篇目录：[`articles/01-rust-basics-compiling-and-reading/`](articles/01-rust-basics-compiling-and-reading/)，对应 tag `v0.1.0`（见仓库 Releases）。
+- 当前已发布：第一篇 [`articles/01-rust-basics-compiling-and-reading/`](articles/01-rust-basics-compiling-and-reading/) → tag `v0.1.0`；第二篇 [`articles/02-understanding-ownership-and-borrowing/`](articles/02-understanding-ownership-and-borrowing/) → tag `v0.2.0`（见仓库 Releases）。
 - 版本约定：每篇文章一个 minor 版本（第一篇 `v0.1.0`、第二篇 `v0.2.0`，依次类推），同一篇的修正用 patch（如 `v0.1.1`）。后续文章增量新增 `articles/02-…` 等目录，不移动已发布目录。详见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
 
 ## 反馈与贡献
